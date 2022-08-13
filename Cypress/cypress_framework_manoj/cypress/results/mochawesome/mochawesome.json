@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-13T05:33:58.203Z",
+    "end": "2022-08-13T05:34:13.253Z",
+    "duration": 15050,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "25263ced-9810-4e34-b899-c7a707ff3b4d",
+      "title": "",
+      "fullFile": "cypress/integration/automation-test-store/add-multiple-items_tobasket.js",
+      "file": "cypress/integration/automation-test-store/add-multiple-items_tobasket.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "872deeb8-ed39-43e1-89c4-8e667495174a",
+          "title": "Add multiple items to basket",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add specific items to basket",
+              "fullTitle": "Add multiple items to basket Add specific items to basket",
+              "timedOut": null,
+              "duration": 10581,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "globalThis.data.productName.forEach(function (element) {\n  cy.addProductToBasket(element);\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add multiple items to basket`",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add multiple items to basket`\n    at timedOutWaitingForPageLoad (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:155054:72)\n    at https://www.automationteststore.com/__cypress/runner/cypress_runner.js:156091:16\n    at tryCatcher (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:13212:23)\n    at https://www.automationteststore.com/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://www.automationteststore.com/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.automationteststore.com/__cypress/tests?p=cypress\\integration\\automation-test-store\\add-multiple-items_tobasket.js:107:8)",
+                "diff": null
+              },
+              "uuid": "f1aec814-a3ed-4359-aeef-e1fb0911ebe0",
+              "parentUUID": "872deeb8-ed39-43e1-89c4-8e667495174a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f1aec814-a3ed-4359-aeef-e1fb0911ebe0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

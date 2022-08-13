@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-13T05:35:48.380Z",
+    "end": "2022-08-13T05:35:57.991Z",
+    "duration": 9611,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "47327903-ec13-46cd-b3f7-5ed602b742c8",
+      "title": "",
+      "fullFile": "cypress/integration/webdriver-uni/contact-us.js",
+      "file": "cypress/integration/webdriver-uni/contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f32bdd66-25f8-4ba5-8e13-1aca8b815f10",
+          "title": "Test contact us page via webdriver",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "MultipleWindow Handling mechanism",
+              "fullTitle": "Test contact us page via webdriver MultipleWindow Handling mechanism",
+              "timedOut": null,
+              "duration": 2765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.visit('http://www.webdriveruniversity.com/')\n//cy.get('#contact-us').invoke('removeAttr','target').click({force:true})\ncy.get('[name=\"first_name\"]').type(\"Manoj\");\ncy.get('[name=\"email\"]').type(\"manoj@gmail.com\");",
+              "err": {},
+              "uuid": "b207d849-cf4d-415c-8550-c2c5c061f580",
+              "parentUUID": "f32bdd66-25f8-4ba5-8e13-1aca8b815f10",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to submit successfull",
+              "fullTitle": "Test contact us page via webdriver Should be able to submit successfull",
+              "timedOut": null,
+              "duration": 3756,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit('http://www.webdriveruniversity.com/Contact-Us/contactus.html')\n//cy.webdriverUni_contactForm_Submission(Cypress.env(\"first_name\"),data.last_name,data.email,data.feedback,'h1','Thank You for your Message!');   \ncontact_US_PO.contactform_Submission(Cypress.env(\"first_name\"), data.last_name, data.email, data.feedback, 'h1', 'Thank You for your Message!'); //webdriverUni_contactForm_Submission\n//cy.get('[name=\"first_name\"]').type(\"Manoj\")\n//cy.get('[name=\"last_name\"]').type(\"Kumar\")\n//cy.get('[name=\"email\"]').type(\"manoj@gmail.com\")\n//cy.get('textarea.feedback-input').type(\"Entering the test\")\n//cy.get('[type=\"submit\"]').click()\n//cy.get('h1').contains('have.text','Thank You for your Message!')",
+              "err": {},
+              "uuid": "9e7b52f5-a137-4b5f-86ec-e0f5f49fb348",
+              "parentUUID": "f32bdd66-25f8-4ba5-8e13-1aca8b815f10",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not be able to submit successfull",
+              "fullTitle": "Test contact us page via webdriver Should not be able to submit successfull",
+              "timedOut": null,
+              "duration": 3029,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//  cy.visit('http://www.webdriveruniversity.com/Contact-Us/contactus.html')\ncy.document().should('have.property', 'charset').and('eq', 'UTF-8');\ncy.url().should('include', 'contactus'); //cy.title().should('include','WebDriver | Contact-Us')\ncontact_US_PO.contactform_Submission(data.first_name, data.last_name, \" \", data.feedback, 'body', 'Error: Invalid email address'); // cy.get('[name=\"first_name\"]').type(data.first_name)\n//cy.get('[name=\"last_name\"]').type(data.last_name)\n//cy.get('[name=\"email\"]').type(\"manoj\")\n//cy.get('textarea.feedback-input').type(\"Entering the test\")\n//cy.get('[type=\"submit\"]').click()\n//cy.get('body').contains('Error: Invalid email address')",
+              "err": {},
+              "uuid": "2deadf83-d17c-4a2b-a280-b33d49092a87",
+              "parentUUID": "f32bdd66-25f8-4ba5-8e13-1aca8b815f10",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b207d849-cf4d-415c-8550-c2c5c061f580",
+            "9e7b52f5-a137-4b5f-86ec-e0f5f49fb348",
+            "2deadf83-d17c-4a2b-a280-b33d49092a87"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

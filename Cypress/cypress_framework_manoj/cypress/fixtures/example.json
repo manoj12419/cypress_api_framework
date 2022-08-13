@@ -1,0 +1,8 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "manoj@gmail.com",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "first_name":"Manoj",
+  "last_name":"Kumar",
+  "feedback":"Testing in progress"
+}

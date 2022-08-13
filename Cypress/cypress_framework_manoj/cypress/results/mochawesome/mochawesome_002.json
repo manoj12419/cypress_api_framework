@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-13T05:34:37.756Z",
+    "end": "2022-08-13T05:34:48.682Z",
+    "duration": 10926,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4bbc1889-f1da-45f4-ab70-23b4cc296295",
+      "title": "",
+      "fullFile": "cypress/integration/automation-test-store/contact-us.js",
+      "file": "cypress/integration/automation-test-store/contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be85ef01-9614-4f0c-bf91-74701b60c311",
+          "title": "Test contact us page via automation store",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit successfull",
+              "fullTitle": "Test contact us page via automation store Should be able to submit successfull",
+              "timedOut": null,
+              "duration": 8892,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.automationteststore.com/');\ncy.xpath(\"//a[text()='Contact Us']\").click();\ncy.get(\"@user\").then(user => {\n  cy.get('#ContactUsFrm_first_name').type(user.first_name);\n  cy.get('#ContactUsFrm_email').type(user.email);\n});\ncy.get('#ContactUsFrm_email').should('have.attr', 'name', 'email');\ncy.get('#ContactUsFrm_enquiry').type(\"enter comment here\");\ncy.xpath(\"//button[@title='Submit']\").click();\ncy.get('.mb40 > :nth-child(3)').should('have.text', 'Your enquiry has been successfully sent to the store owner!');",
+              "err": {},
+              "uuid": "fb1c52f0-2faf-4e89-89e2-82a7277fe497",
+              "parentUUID": "be85ef01-9614-4f0c-bf91-74701b60c311",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb1c52f0-2faf-4e89-89e2-82a7277fe497"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8892,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
